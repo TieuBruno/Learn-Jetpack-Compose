@@ -7,6 +7,7 @@ buildscript {
             'composeActivity': '1.4.0',
             'composeConstraintLayout': '1.0.1',
             'composeNavigation': '2.4.2',
+            'composeMaterial3': '1.0.1',
             'constraintLayout' : '2.1.4',
             'coroutine': '1.6.2',
             'espresso': '3.2.0',
@@ -22,6 +23,9 @@ buildscript {
             'picasso': '2.71828',
             'supportLibrary': '1.4.2',
             'testRunner': '1.2.0',
+            'koin': '3.2.2',
+            'retrofit': '2.9.0',
+            'okhttp': '4.10.0'
     ]
     ext.deps = [
             'cardView': "androidx.cardview:cardview:${versions.cardView}",
@@ -37,6 +41,7 @@ buildscript {
                     'tooling': "androidx.compose.ui:ui-tooling:${versions.compose}",
                     'layout': "androidx.compose.foundation:foundation-layout:${versions.compose}",
                     'material': "androidx.compose.material:material:${versions.compose}",
+                    'material3': "androidx.compose.material3:material3:${versions.composeMaterial3}",
                     'savedInstanceState': "androidx.compose.runtime:runtime-saveable:${versions.compose}",
                     'uiTest': "androidx.compose.ui:ui-test-junit4:${versions.compose}",
                     'uiLiveData': "androidx.compose.runtime:runtime-livedata:${versions.compose}"
@@ -44,6 +49,7 @@ buildscript {
             'constraintLayout': "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
             'coroutine': [
                     'core': "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutine}",
+                    'android': "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutine}"
             ],
             'kotlinStdLib': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}",
             'imageLoading': [
@@ -62,6 +68,17 @@ buildscript {
                     'junit': "junit:junit:${versions.junit}",
                     'junitImplementation': "androidx.test.ext:junit:${versions.junitImplementation}",
                     'androidxTestRunner': "androidx.test:runner:${versions.testRunner}"
+            ],
+            'koin': [
+                    'core': "io.insert-koin:koin-core:${versions.koin}",
+                    'android': "io.insert-koin:koin-android:${versions.koin}",
+                    'compose': "io.insert-koin:koin-androidx-compose:${versions.koin}"
+            ],
+            'network': [
+                    'retrofit': "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                    'converterGson': "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+                    'okhttp': "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+                    'loggingInterceptor': "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
             ]
     ]
     repositories {

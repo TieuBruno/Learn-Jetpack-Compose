@@ -55,6 +55,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    // Modules
+    implementation project(':data')
+    implementation project(':quickie')
+
     // Kotlin
     implementation deps.kotlinStdLib
 
@@ -73,6 +77,7 @@ dependencies {
 
     // Coroutine
     implementation deps.coroutine.core
+    implementation deps.coroutine.android
 
     // Compose
     implementation deps.compose.activityCompose
@@ -84,10 +89,16 @@ dependencies {
     implementation deps.compose.tooling
     implementation deps.compose.layout
     implementation deps.compose.material
+    implementation deps.compose.material3
     implementation deps.compose.savedInstanceState
     implementation deps.compose.uiLiveData
     androidTestImplementation deps.compose.composeNavigationTest
     androidTestImplementation deps.compose.uiTest
+
+    // DI - Koin
+    implementation deps.koin.core
+    implementation deps.koin.android
+    implementation deps.koin.compose
 
     // Image loading
     implementation deps.imageLoading.picasso

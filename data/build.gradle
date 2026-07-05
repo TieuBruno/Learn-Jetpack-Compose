@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.jetpackcomposeplayground.data'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    implementation deps.kotlinStdLib
+    implementation deps.coroutine.core
+    implementation deps.coroutine.android
+    
+    // Koin
+    implementation deps.koin.core
+    implementation deps.koin.android
+    
+    // Network
+    implementation deps.network.retrofit
+    implementation deps.network.converterGson
+    implementation deps.network.okhttp
+    implementation deps.network.loggingInterceptor
+}

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material3.ExperimentalMaterial3Api
 import com.example.jetpackcompose.R
 import com.example.jetpackcompose.animation.Animation1Activity
 import com.example.jetpackcompose.animation.Animation2Activity
@@ -51,6 +52,16 @@ class MainActivity : AppCompatActivity() {
 
     fun startSimpleTextExample(view: View) {
         startActivity(Intent(this, SimpleTextActivity::class.java))
+    }
+
+    @OptIn(ExperimentalMaterial3Api::class)
+    fun startPostArchitectureExample(view: View) {
+        startActivity(Intent(this, com.example.jetpackcomposeplayground.presentation.post.PostActivity::class.java))
+    }
+
+    @OptIn(ExperimentalMaterial3Api::class)
+    fun startUserArchitectureExample(view: View) {
+        startActivity(Intent(this, com.example.jetpackcomposeplayground.presentation.user.UserAcitivity::class.java))
     }
 
     fun startCustomTextExample(view: View) {
